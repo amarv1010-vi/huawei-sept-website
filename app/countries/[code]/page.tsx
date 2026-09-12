@@ -1,0 +1,1 @@
+import {Dashboard} from '@/components/dashboard';import {countries} from '@/lib/intelligence';export function generateStaticParams(){return countries.map(c=>({code:c.code.toLowerCase()}))}export default async function Page({params}:{params:Promise<{code:string}>}){return <Dashboard view="country" code={(await params).code}/>} 

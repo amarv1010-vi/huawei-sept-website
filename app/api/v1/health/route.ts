@@ -1,0 +1,1 @@
+export function GET(){return Response.json({service:'Huawei Intelligence',apiVersion:'1.0.0',researchAsOf:'2026-09-12',collection:{status:'awaiting scheduled collection',cadence:'48 hours',xApiConfigured:false}})}

@@ -1,0 +1,1 @@
+import {countries,articles} from '@/lib/intelligence';export async function GET(_:Request,{params}:{params:Promise<{code:string}>}){const c=countries.find(x=>x.code===((await params).code||'').toUpperCase());return c?Response.json({...c,records:articles.filter(a=>a.countries.includes(c.code))}):Response.json({error:'Unknown country'},{status:404})}

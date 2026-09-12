@@ -1,0 +1,1 @@
+import {countries,articles} from '@/lib/intelligence';export default function sitemap(){const b='https://huawei-intelligence.amarvi.chatgpt.site';return ['','/heatmap','/news','/countries','/trends','/sources','/integrations',...countries.map(c=>'/countries/'+c.code.toLowerCase()),...articles.map(a=>'/news/'+a.id)].map(url=>({url:b+url,lastModified:'2026-09-12'}))}
